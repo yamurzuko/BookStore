@@ -1,14 +1,15 @@
 ﻿using BookStore.DBOperations;
+using AutoMapper;
 
 namespace BookStore.BookOperations.UpdateBook
 {
     public class UpdateBookCommand
     {
-        private readonly BookStoreDBContext _dbContext;
-
         public int BookId { get; set; }
 
         public UpdateBookModel Model { get; set; }
+
+        private readonly BookStoreDBContext _dbContext;
 
         public UpdateBookCommand(BookStoreDBContext dBContext)
         {
@@ -23,10 +24,10 @@ namespace BookStore.BookOperations.UpdateBook
             {
                 throw new InvalidOperationException("Kitap Bulunamadı");
             }
-
+            
             book.GenreId = Model.GenreId != default ? Model.GenreId : book.GenreId;
             book.Title = Model.Title != default ? Model.Title : book.Title;
-
+            
             _dbContext.SaveChanges();
         }
 
