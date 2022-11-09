@@ -1,5 +1,6 @@
 ﻿using BookStore.DBOperations;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection;
 
 internal class Program
 {
@@ -9,6 +10,7 @@ internal class Program
 
         // Add services to the container.
         builder.Services.AddDbContext<BookStoreDBContext>(Options => Options.UseInMemoryDatabase(databaseName: "BookStoreDB"));
+        builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
         builder.Services.AddControllers();
 

@@ -1,4 +1,5 @@
 ﻿using BookStore.DBOperations;
+using AutoMapper;
 
 namespace BookStore.BookOperations.CreateBook
 {
@@ -8,9 +9,12 @@ namespace BookStore.BookOperations.CreateBook
 
         private readonly BookStoreDBContext _dbContect;
 
-        public CreateBookCommand(BookStoreDBContext dBContext)
+        private readonly IMapper _dbMapper;
+
+        public CreateBookCommand(BookStoreDBContext dbContext, IMapper dbMapper)
         {
-            _dbContect = dBContext;
+            _dbContect = dbContext;
+            _dbMapper = dbMapper;
         }
 
         public void Handle()
@@ -22,11 +26,15 @@ namespace BookStore.BookOperations.CreateBook
                 throw new InvalidOperationException("Kitap Zaten Mevcut");
             }
 
+            /*
             book = new Book();
             book.Title = Model.Title;
             book.PublishDate = Model.PublishDate;
             book.GenreId = Model.GenreId;
             book.PageCount = Model.PageCount;
+            */
+
+            book = _dbMapper.Map<Book>(Model);
 
             _dbContect.Books.Add(book);
             _dbContect.SaveChanges();
