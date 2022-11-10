@@ -13,6 +13,7 @@
     <PackageReference Include="AutoMapper" Version="12.0.0" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
     <PackageReference Include="FluentValidation" Version="11.2.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
 
   <ItemGroup>
@@ -28,6 +29,8 @@
     <None Remove="AutoMapper" />
     <None Remove="AutoMapper.Extensions.Microsoft.DependencyInjection" />
     <None Remove="FluentValidation" />
+    <None Remove="Middlewares\" />
+    <None Remove="Newtonsoft.Json" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DBOperations\" />
@@ -37,5 +40,6 @@
     <Folder Include="BookOperations\CreateBook\" />
     <Folder Include="BookOperations\UpdateBook\" />
     <Folder Include="BookOperations\DeleteBook\" />
+    <Folder Include="Middlewares\" />
   </ItemGroup>
 </Project>
