@@ -31,6 +31,7 @@
     <None Remove="FluentValidation" />
     <None Remove="Middlewares\" />
     <None Remove="Newtonsoft.Json" />
+    <None Remove="Services\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DBOperations\" />
@@ -41,5 +42,6 @@
     <Folder Include="BookOperations\UpdateBook\" />
     <Folder Include="BookOperations\DeleteBook\" />
     <Folder Include="Middlewares\" />
+    <Folder Include="Services\" />
   </ItemGroup>
 </Project>
