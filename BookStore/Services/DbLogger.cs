@@ -1,5 +1,4 @@
-﻿using System;
-namespace BookStore.Services
+﻿namespace BookStore.Services
 {
     public class DbLogger : ILoggerService
     {

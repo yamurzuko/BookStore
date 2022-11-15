@@ -1,7 +1,9 @@
 ﻿using BookStore.DBOperations;
 using AutoMapper;
+using BookStore.Entities;
 
-namespace BookStore.BookOperations.UpdateBook
+
+namespace BookStore.Application.BookOperations.UpdateBook
 {
     public class UpdateBookCommand
     {

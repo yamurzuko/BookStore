@@ -1,8 +1,6 @@
-﻿using System;
-
-namespace BookStore.Services
+﻿namespace BookStore.Services
 {
-	public interface ILoggerService
+    public interface ILoggerService
 	{
 		public void Write(string message);
 	}

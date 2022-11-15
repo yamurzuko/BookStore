@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using BookStore.Entities;
 
 namespace BookStore.DBOperations
 {
@@ -12,6 +13,20 @@ namespace BookStore.DBOperations
                 {
                     return;
                 }
+                context.Genres.AddRange(
+                    new Genre
+                    {
+                        Name = "Personal Growt"
+                    },
+                    new Genre
+                    {
+                        Name = "Science Fiction"
+                    },
+                    new Genre
+                    {
+                        Name = "Romance"
+                    }
+                 );
 
                 context.Books.AddRange(
 

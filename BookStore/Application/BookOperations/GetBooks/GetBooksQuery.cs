@@ -1,8 +1,9 @@
-﻿using BookStore.Common;
+﻿using AutoMapper;
 using BookStore.DBOperations;
-using AutoMapper;
+using BookStore.Entities;
+using Microsoft.EntityFrameworkCore;
 
-namespace BookStore.BookOperations.GetBooks
+namespace BookStore.Application.BookOperations.GetBooks
 {
     public class GetBooksQuery
     {
@@ -18,7 +19,7 @@ namespace BookStore.BookOperations.GetBooks
 
         public List<BooksViewModel> Handle()
         {
-            var bookList = _dBContext.Books.OrderBy(x => x.Id).ToList<Book>();
+            var bookList = _dBContext.Books.Include(x => x.Genre).OrderBy(x => x.Id).ToList<Book>();
             /*
             List<BooksViewModel> viewModel = new List<BooksViewModel>();
 

@@ -1,8 +1,8 @@
-﻿using BookStore.DBOperations;
-using Microsoft.EntityFrameworkCore;
-using System.Reflection;
+﻿using System.Reflection;
+using BookStore.DBOperations;
 using BookStore.Middlewares;
 using BookStore.Services;
+using Microsoft.EntityFrameworkCore;
 
 internal class Program
 {

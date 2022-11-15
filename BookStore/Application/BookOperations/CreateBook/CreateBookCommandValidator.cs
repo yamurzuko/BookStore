@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 
-namespace BookStore.BookOperations.CreateBook
+namespace BookStore.Application.BookOperations.CreateBook
 {
 	public class CreateBookCommandValidator : AbstractValidator<CreateBookCommand>
 	{
