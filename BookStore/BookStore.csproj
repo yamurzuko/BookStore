@@ -32,6 +32,7 @@
     <None Remove="Middlewares\" />
     <None Remove="Newtonsoft.Json" />
     <None Remove="Services\" />
+    <None Remove="Entities\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DBOperations\" />
@@ -43,5 +44,6 @@
     <Folder Include="BookOperations\DeleteBook\" />
     <Folder Include="Middlewares\" />
     <Folder Include="Services\" />
+    <Folder Include="Entities\" />
   </ItemGroup>
 </Project>
