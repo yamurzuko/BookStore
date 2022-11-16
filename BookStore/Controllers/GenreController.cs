@@ -27,6 +27,7 @@ namespace BookStore.Controllers
         }
 
         [HttpGet]
+
         public IActionResult GetGenres()
         {
             GetGenresQuery query = new GetGenresQuery(_context, _mapper);
@@ -67,7 +68,7 @@ namespace BookStore.Controllers
 
         public IActionResult UpdateGenre(int id, [FromBody] UpdateGenreModel updateGenre)
         {
-            UpdateGenreCommand command = new UpdateGenreCommand(_context, _mapper);
+            UpdateGenreCommand command = new UpdateGenreCommand(_context);
             UpdateGenreCommandValidator validator = new UpdateGenreCommandValidator();
 
             command.GenreId = id;

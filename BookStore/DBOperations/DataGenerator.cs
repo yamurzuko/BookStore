@@ -13,6 +13,28 @@ namespace BookStore.DBOperations
                 {
                     return;
                 }
+
+                context.Authors.AddRange(
+                    new Author
+                    {
+                        Name = "Orhan",
+                        Surname = "Veli",
+                        BirthDate = new DateTime(1990, 10, 05)
+                    },
+                    new Author
+                    {
+                        Name = "Ahmet",
+                        Surname = "Ucar",
+                        BirthDate = new DateTime(1960, 11, 24)
+                    },
+                    new Author
+                    {
+                        Name = "Tuba",
+                        Surname = "Güler",
+                        BirthDate = new DateTime(1972, 08, 08)
+                    }
+                );
+
                 context.Genres.AddRange(
                     new Genre
                     {
@@ -33,14 +55,16 @@ namespace BookStore.DBOperations
                     new Book
                     {
                         Title = "Lean Startup",
-                        GenreId = 1, 
+                        GenreId = 1,
+                        AuthorId = 1,
                         PageCount = 200,
                         PublishDate = new DateTime(1997, 05, 24)
                     },
                     new Book
                     {
                         Title = "Healand",
-                        GenreId = 2, 
+                        GenreId = 2,
+                        AuthorId = 2,
                         PageCount = 240,
                         PublishDate = new DateTime(2002, 09, 12)
                     },
@@ -48,6 +72,7 @@ namespace BookStore.DBOperations
                     {
                         Title = "Dune",
                         GenreId = 3,
+                        AuthorId = 3,
                         PageCount = 300,
                         PublishDate = new DateTime(2001, 12, 21)
                     }

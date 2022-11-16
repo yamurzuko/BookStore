@@ -19,7 +19,7 @@ namespace BookStore.Application.BookOperations.GetBooks
 
         public List<BooksViewModel> Handle()
         {
-            var bookList = _dBContext.Books.Include(x => x.Genre).OrderBy(x => x.Id).ToList<Book>();
+            var bookList = _dBContext.Books.Include(x => x.Genre).Include(x => x.Author).OrderBy(x => x.Id).ToList<Book>();
             /*
             List<BooksViewModel> viewModel = new List<BooksViewModel>();
 
@@ -45,6 +45,8 @@ namespace BookStore.Application.BookOperations.GetBooks
         public string Title { get; set; }
 
         public string Genre { get; set; }
+
+        public string Author { get; set; }
 
         public int PageCount { get; set; }
 

@@ -13,12 +13,9 @@ namespace BookStore.Application.GenreOperations.UpdateGenre
 
 		private readonly BookStoreDBContext _context;
 
-		private readonly IMapper _mapper;
-
-        public UpdateGenreCommand(BookStoreDBContext context, IMapper mapper)
+        public UpdateGenreCommand(BookStoreDBContext context)
         {
             _context = context;
-            _mapper = mapper;
         }
 
 		public void Handle()

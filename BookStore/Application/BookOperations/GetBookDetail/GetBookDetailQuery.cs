@@ -21,7 +21,7 @@ namespace BookStore.Application.BookOperations.GetBookDetail
 
         public BookDetailViewModel Handle()
         {
-            var book = _dbContext.Books.Include(x => x.Genre).Where(book => book.Id == BookId).SingleOrDefault();
+            var book = _dbContext.Books.Include(x => x.Genre).SingleOrDefault(book => book.Id == BookId);
 
             if(book == null)
             {
@@ -46,6 +46,8 @@ namespace BookStore.Application.BookOperations.GetBookDetail
         public string Title { get; set; }
 
         public string Genre { get; set; }
+
+        public string Author { get; set; }
 
         public int PageCount { get; set; }
 

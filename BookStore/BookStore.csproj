@@ -35,6 +35,12 @@
     <None Remove="Application\GenreOperations\CreateGenre\" />
     <None Remove="Application\GenreOperations\DeleteGenre\" />
     <None Remove="Application\GenreOperations\UpdateGenre\" />
+    <None Remove="Application\AuthorOperations\" />
+    <None Remove="Application\AuthorOperations\GetAuthors\" />
+    <None Remove="Application\AuthorOperations\GetAuthorDetail\" />
+    <None Remove="Application\AuthorOperations\CreateAuthor\" />
+    <None Remove="Application\AuthorOperations\UpdateAuthor\" />
+    <None Remove="Application\AuthorOperations\DeleteAuthor\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DBOperations\" />
@@ -49,5 +55,12 @@
     <Folder Include="Application\GenreOperations\CreateGenre\" />
     <Folder Include="Application\GenreOperations\DeleteGenre\" />
     <Folder Include="Application\GenreOperations\UpdateGenre\" />
+    <Folder Include="Application\AuthorOperations\" />
+    <Folder Include="Application\AuthorOperations\GetAuthors\" />
+    <Folder Include="Application\AuthorOperations\GetAuthorDetail\" />
+    <Folder Include="Application\AuthorOperations\CreateAuthor\" />
+    <Folder Include="Application\AuthorOperations\CreateAuthor\" />
+    <Folder Include="Application\AuthorOperations\UpdateAuthor\" />
+    <Folder Include="Application\AuthorOperations\DeleteAuthor\" />
   </ItemGroup>
 </Project>
