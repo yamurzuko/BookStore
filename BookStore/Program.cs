@@ -12,6 +12,7 @@ internal class Program
 
         // Add services to the container.
         builder.Services.AddDbContext<BookStoreDBContext>(Options => Options.UseInMemoryDatabase(databaseName: "BookStoreDB"));
+        builder.Services.AddScoped<IBookStoreDBContext>(provider => provider.GetService<BookStoreDBContext>());
         builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
         builder.Services.AddSingleton<ILoggerService, ConsoleLogger>();
 

@@ -10,11 +10,11 @@ namespace BookStore.Application.AuthorOperations.GetAuthorDetail
 
         public GetAuthorDetailModel Model { get; set; }
 
-		private readonly BookStoreDBContext _context;
+		private readonly IBookStoreDBContext _context;
 
 		private readonly IMapper _mapper;
 
-        public GetAuthorDetailQuery(BookStoreDBContext context, IMapper mapper)
+        public GetAuthorDetailQuery(IBookStoreDBContext context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;

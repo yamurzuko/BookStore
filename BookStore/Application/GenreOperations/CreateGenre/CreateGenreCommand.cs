@@ -8,11 +8,11 @@ namespace BookStore.Application.GenreOperations.CreateGenre
 	{
 		public CreateGenreModel Model { get; set; }
 
-		private readonly BookStoreDBContext _context;
+		private readonly IBookStoreDBContext _context;
 
         private readonly IMapper _mapper;
 
-        public CreateGenreCommand(BookStoreDBContext context, IMapper mapper)
+        public CreateGenreCommand(IBookStoreDBContext context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;

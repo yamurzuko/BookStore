@@ -5,11 +5,11 @@ namespace BookStore.Application.GenreOperations.GetGenres
 {
     public class GetGenresQuery
 	{
-        public readonly BookStoreDBContext _context;
+        public readonly IBookStoreDBContext _context;
 
         public readonly IMapper _mapper;
 
-        public GetGenresQuery(BookStoreDBContext context, IMapper mapper)
+        public GetGenresQuery(IBookStoreDBContext context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;

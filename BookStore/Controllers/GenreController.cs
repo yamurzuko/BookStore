@@ -16,11 +16,11 @@ namespace BookStore.Controllers
 
     public class GenreController : ControllerBase
 	{
-        private readonly BookStoreDBContext _context;
+        private readonly IBookStoreDBContext _context;
 
         private readonly IMapper _mapper;
 
-        public GenreController(BookStoreDBContext context, IMapper mapper)
+        public GenreController(IBookStoreDBContext context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;

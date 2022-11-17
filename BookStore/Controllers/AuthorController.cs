@@ -15,11 +15,11 @@ namespace BookStore.Controllers
 
     public class AuthorController : ControllerBase
     {
-        private readonly BookStoreDBContext _context;
+        private readonly IBookStoreDBContext _context;
 
         private readonly IMapper _mapper;
 
-        public AuthorController(BookStoreDBContext context, IMapper mapper)
+        public AuthorController(IBookStoreDBContext context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;
