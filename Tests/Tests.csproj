@@ -37,7 +37,6 @@
     <None Remove="Microsoft.EntityFrameworkCore.InMemory" />
     <None Remove="Applications\BookOperationTests\CreateBookTests\" />
     <None Remove="Applications\BookOperationTests\DeleteBookTests\" />
-    <None Remove="Applications\BookOperationTests\GetBookTests\" />
     <None Remove="Applications\BookOperationTests\GetBookDetailTests\" />
     <None Remove="Applications\BookOperationTests\UpdateBookTests\" />
   </ItemGroup>
@@ -49,7 +48,6 @@
     <Folder Include="TestsSetup\" />
     <Folder Include="Applications\BookOperationTests\CreateBookTests\" />
     <Folder Include="Applications\BookOperationTests\DeleteBookTests\" />
-    <Folder Include="Applications\BookOperationTests\GetBookTests\" />
     <Folder Include="Applications\BookOperationTests\GetBookDetailTests\" />
     <Folder Include="Applications\BookOperationTests\UpdateBookTests\" />
   </ItemGroup>

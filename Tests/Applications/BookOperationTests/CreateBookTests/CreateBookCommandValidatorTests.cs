@@ -1,5 +1,4 @@
 ﻿using BookStore.Application.BookOperations.CreateBook;
-using BookStore.Entities;
 using FluentAssertions;
 using Tests.TestSetup;
 using static BookStore.Application.BookOperations.CreateBook.CreateBookCommand;
