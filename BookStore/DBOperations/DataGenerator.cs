@@ -15,6 +15,7 @@ namespace BookStore.DBOperations
                 }
 
                 context.Authors.AddRange(
+
                     new Author
                     {
                         Name = "Orhan",
@@ -36,6 +37,7 @@ namespace BookStore.DBOperations
                 );
 
                 context.Genres.AddRange(
+
                     new Genre
                     {
                         Name = "Personal Growt"
