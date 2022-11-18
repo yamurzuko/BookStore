@@ -39,6 +39,10 @@
     <None Remove="Applications\BookOperationTests\DeleteBookTests\" />
     <None Remove="Applications\BookOperationTests\GetBookDetailTests\" />
     <None Remove="Applications\BookOperationTests\UpdateBookTests\" />
+    <None Remove="Applications\AuthorOperationTests\CreateAuthorTests\" />
+    <None Remove="Applications\AuthorOperationTests\DeleteAuthorTests\" />
+    <None Remove="Applications\AuthorOperationTests\UpdateAuthorTests\" />
+    <None Remove="Applications\AuthorOperationTests\GetAuthorDetailTests\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Applications\" />
@@ -50,6 +54,10 @@
     <Folder Include="Applications\BookOperationTests\DeleteBookTests\" />
     <Folder Include="Applications\BookOperationTests\GetBookDetailTests\" />
     <Folder Include="Applications\BookOperationTests\UpdateBookTests\" />
+    <Folder Include="Applications\AuthorOperationTests\CreateAuthorTests\" />
+    <Folder Include="Applications\AuthorOperationTests\DeleteAuthorTests\" />
+    <Folder Include="Applications\AuthorOperationTests\UpdateAuthorTests\" />
+    <Folder Include="Applications\AuthorOperationTests\GetAuthorDetailTests\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BookStore\BookStore.csproj" />
