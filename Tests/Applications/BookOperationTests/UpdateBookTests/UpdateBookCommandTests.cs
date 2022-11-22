@@ -1,7 +1,4 @@
-﻿using System;
-using AutoMapper;
-using BookStore.Application.BookOperations.GetBookDetail;
-using BookStore.Application.BookOperations.UpdateBook;
+﻿using BookStore.Application.BookOperations.UpdateBook;
 using BookStore.DBOperations;
 using BookStore.Entities;
 using FluentAssertions;
@@ -10,7 +7,7 @@ using static BookStore.Application.BookOperations.UpdateBook.UpdateBookCommand;
 
 namespace Tests.Applications.BookOperationTests.UpdateBookTests
 {
-	public class UpdateBookCommandTests : IClassFixture<CommonTestFixture>
+    public class UpdateBookCommandTests : IClassFixture<CommonTestFixture>
     {
         private readonly BookStoreDBContext _context;
 
@@ -66,7 +63,6 @@ namespace Tests.Applications.BookOperationTests.UpdateBookTests
             book.Title.Should().Be(model.Title);
             book.GenreId.Should().Be(model.GenreId);
             book.AuthorId.Should().Be(model.AuthorId);
-
         }
     }
 }

@@ -43,6 +43,10 @@
     <None Remove="Applications\AuthorOperationTests\DeleteAuthorTests\" />
     <None Remove="Applications\AuthorOperationTests\UpdateAuthorTests\" />
     <None Remove="Applications\AuthorOperationTests\GetAuthorDetailTests\" />
+    <None Remove="Applications\GenreOperationTests\CreateGenreTests\" />
+    <None Remove="Applications\GenreOperationTests\DeleteGenreTests\" />
+    <None Remove="Applications\GenreOperationTests\GetGenreDetailTests\" />
+    <None Remove="Applications\GenreOperationTests\UpdateGenreTests\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Applications\" />
@@ -58,6 +62,10 @@
     <Folder Include="Applications\AuthorOperationTests\DeleteAuthorTests\" />
     <Folder Include="Applications\AuthorOperationTests\UpdateAuthorTests\" />
     <Folder Include="Applications\AuthorOperationTests\GetAuthorDetailTests\" />
+    <Folder Include="Applications\GenreOperationTests\CreateGenreTests\" />
+    <Folder Include="Applications\GenreOperationTests\DeleteGenreTests\" />
+    <Folder Include="Applications\GenreOperationTests\GetGenreDetailTests\" />
+    <Folder Include="Applications\GenreOperationTests\UpdateGenreTests\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BookStore\BookStore.csproj" />
