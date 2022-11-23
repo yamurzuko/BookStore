@@ -52,6 +52,7 @@
     <None Remove="Application\UserOperations\CreateToken\" />
     <None Remove="TokenOperations\" />
     <None Remove="TokenOperations\Models\" />
+    <None Remove="Application\UserOperations\RefreshToken\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DBOperations\" />
@@ -78,5 +79,6 @@
     <Folder Include="Application\UserOperations\CreateToken\" />
     <Folder Include="TokenOperations\" />
     <Folder Include="TokenOperations\Models\" />
+    <Folder Include="Application\UserOperations\RefreshToken\" />
   </ItemGroup>
 </Project>
