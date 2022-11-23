@@ -1,8 +1,11 @@
 ﻿using System.Reflection;
+using System.Text;
 using BookStore.DBOperations;
 using BookStore.Middlewares;
 using BookStore.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 
 internal class Program
 {
@@ -10,11 +13,27 @@ internal class Program
     {
         var builder = WebApplication.CreateBuilder(args);
 
+        ConfigurationManager configuration = builder.Configuration;
+
         // Add services to the container.
         builder.Services.AddDbContext<BookStoreDBContext>(Options => Options.UseInMemoryDatabase(databaseName: "BookStoreDB"));
         builder.Services.AddScoped<IBookStoreDBContext>(provider => provider.GetService<BookStoreDBContext>());
         builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
         builder.Services.AddSingleton<ILoggerService, ConsoleLogger>();
+        builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(opt =>
+        {
+            opt.TokenValidationParameters = new TokenValidationParameters
+            {
+                ValidateAudience = true,
+                ValidateIssuer = true,
+                ValidateLifetime = true,
+                ValidateIssuerSigningKey = true,
+                ValidIssuer = configuration["Token:Issuer"],
+                ValidAudience = configuration["Token:Audience"],
+                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["Token:SecurityKey"])),
+                ClockSkew = TimeSpan.Zero
+            };
+        });
 
         builder.Services.AddControllers();
 
@@ -36,6 +55,8 @@ internal class Program
             app.UseSwagger();
             app.UseSwaggerUI();
         }
+
+        app.UseAuthentication();
 
         app.UseHttpsRedirection();
 

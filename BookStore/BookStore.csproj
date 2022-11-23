@@ -7,15 +7,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="7.0.0" />
     <PackageReference Include="AutoMapper" Version="12.0.0" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
-    <PackageReference Include="FluentValidation" Version="11.2.2" />
+    <PackageReference Include="FluentValidation" Version="11.3.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="Moq" Version="4.18.2" />
     <PackageReference Include="FluentAssertions" Version="6.8.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.8" />
   </ItemGroup>
 
   <ItemGroup>
@@ -45,6 +46,12 @@
     <None Remove="Application\AuthorOperations\DeleteAuthor\" />
     <None Remove="Moq" />
     <None Remove="FluentAssertions" />
+    <None Remove="Microsoft.AspNetCore.Authentication.JwtBearer" />
+    <None Remove="Application\UserOperations\" />
+    <None Remove="Application\UserOperations\CreateUser\" />
+    <None Remove="Application\UserOperations\CreateToken\" />
+    <None Remove="TokenOperations\" />
+    <None Remove="TokenOperations\Models\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DBOperations\" />
@@ -66,5 +73,10 @@
     <Folder Include="Application\AuthorOperations\CreateAuthor\" />
     <Folder Include="Application\AuthorOperations\UpdateAuthor\" />
     <Folder Include="Application\AuthorOperations\DeleteAuthor\" />
+    <Folder Include="Application\UserOperations\" />
+    <Folder Include="Application\UserOperations\CreateUser\" />
+    <Folder Include="Application\UserOperations\CreateToken\" />
+    <Folder Include="TokenOperations\" />
+    <Folder Include="TokenOperations\Models\" />
   </ItemGroup>
 </Project>
